@@ -1,7 +1,7 @@
 a,b=map(int,input().split(" "))
 result=[]
 num=0
-for i in range(1,b+1):
+for i in range(1,b+1):#0일때
   if num>=b:
     break
   c=i
