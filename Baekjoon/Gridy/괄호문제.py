@@ -1,3 +1,4 @@
+
 # n=int(input())
 # for i in range(n):
 #   cnt=0
@@ -10,9 +11,9 @@
 #     else:
 #       cnt-=1
 #   if cnt==0:
-#     print('Yes')
+#     print('YES')
 #   else:
-#     print('No')
+#     print('NO')
   
 from collections import deque
 n=int(input())
@@ -24,8 +25,13 @@ for i in range(n):
     if len(que)==0:
       que.append(a[i])
     elif len(que)>=1:
-      if a[i]==')':
-        que.pop()
-        print(a)
+      q=que.pop()
+      if a[i] == ')' and q == '(':
+        continue
       else:
+        que.append(q)
         que.append(a[i])
+  if len(que)==0:
+    print('YES')
+  else:
+    print('NO')
