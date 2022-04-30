@@ -4,6 +4,12 @@ a=list(map(int,input().split(" ")))
 a.sort()
 cnt=0
 result=0
+for i in a:
+  cnt+=1
+  if cnt>=i:
+    result+=1
+    cnt=0
+print(result)
 # while len(a)>0: 이렇게 풀면 안되나..
 #   b=a[-1]
 #   cnt+=1
